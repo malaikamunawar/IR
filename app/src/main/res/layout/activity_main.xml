@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Search"
+        android:textColor="@color/white"
+        android:textFontWeight="900"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/field"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Search here"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        android:layout_marginTop="20dp"
+        />
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/field"
+        >
+        <Button
+            android:id="@+id/button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="File Search"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:text="Keyword Match"
+            />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="TFIDF Score" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll"
+        >
+        <Button
+            android:id="@+id/pr"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="PR Model"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            />
+
+        <Button
+            android:id="@+id/non"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="NL Model"
+            />
+
+        <Button
+            android:id="@+id/pnm"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:text="PN Model"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:scrollbars = "vertical"
+        android:text="Search a file first"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ll2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="indexes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv" />
+
+    <Button
+        android:id="@+id/move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/next" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
